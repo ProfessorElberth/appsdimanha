@@ -1,13 +1,30 @@
 package br.edu.infnet.appsdim.aula01;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExemploTeste {
 
 	public static void main(String[] args) {
+		
+		String[] nomes = {"Elberth Moraes", "maria", "jose", "joao"};
+		
+		String[] emails = {"elberth@elberth.com", "maria@maria.com", "jose@jose.com", "joao@joao.com"};
+		
+		List<Aluno> alunos = new ArrayList<Aluno>();
 
-		Aluno aluno = new Aluno();
-		aluno.setId(1);
-		aluno.setNome("Elberth Moraes");
-		aluno.setEmail("elberth.moraes@prof.infnet.edu.br");
-		System.out.println(aluno);
+		//criar objetos: populando a coleção
+		for(int i = 0; i < nomes.length; i++) {
+			Aluno aluno = new Aluno();
+			aluno.setId(i+1);
+			aluno.setNome(nomes[i]);
+			aluno.setEmail(emails[i]);		
+			alunos.add(aluno);		
+		}
+		
+		//leitura da coleção
+		for(Aluno item : alunos) {
+			System.out.println(item);
+		}
 	}
 }
