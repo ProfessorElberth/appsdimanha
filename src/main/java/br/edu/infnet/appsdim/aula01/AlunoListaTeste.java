@@ -3,7 +3,7 @@ package br.edu.infnet.appsdim.aula01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExemploTeste {
+public class AlunoListaTeste {
 
 	public static void main(String[] args) {
 		
@@ -19,6 +19,7 @@ public class ExemploTeste {
 			aluno.setId(i+1);
 			aluno.setNome(nomes[i]);
 			aluno.setEmail(emails[i]);		
+
 			alunos.add(aluno);		
 		}
 		
